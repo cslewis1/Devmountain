@@ -1,7 +1,7 @@
 console.log('Hello world!');
 
 const firstName = 'Michael';
-let age = 40;
+let age = 40; 
 
 console.log(firstName);
 console.log(age);
