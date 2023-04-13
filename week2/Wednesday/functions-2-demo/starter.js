@@ -143,5 +143,24 @@ console.log(catProducts)
 ////// SANDWICHES //////
 ////////////////////////
 
+ 
 // CODE HERE
+const makeSandwich = (bread) => {
+  return (ingredients) => {
+    let order = `You ordered a ${bread} bread sandwich with `
+    for (let i in ingredients) {
+      if (i === ingredients.length - 1 && 1 !== 0) {
+        order += `and ${ingredients[i]}.`
+      } else if (ingredients.length === 1) {
+        order += `${ingredients[i]}, `
+      } else {
+        order += `${ingredients[i]}, `
+      }
+    }
+    return order
+  }
+}
+
+const mySandwich = makeSandwich('wheat')
+console.log(mySandwich(['bacon', 'lettuce', 'tomato']))
 
