@@ -105,7 +105,7 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 */
 
 // CODE HERE
-const orderTotals = orders.map(total => total.price + (total.price * total.tax))
+const orderTotals = orders.map(order => order.price + (order.price * order.tax))
 console.log(orderTotals)
 
 
@@ -126,3 +126,5 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 
 // CODE HERE
+let bobsTotal2 = purchases.filter(purchase => purchase.owner === 'Bob').reduce((a,c) => a + c.price, 0)
+console.log(bobsTotal2)

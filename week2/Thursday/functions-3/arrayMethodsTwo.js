@@ -10,7 +10,8 @@ let numbers = [40, 68, 14, 90, 49];
 */
 
 // CODE HERE
-
+let numbersDivided = numbers.forEach((i) => console.log(i / 2));
+console.log(numbersDivided);
 
 ////////// PROBLEM 2 //////////
 
@@ -23,7 +24,9 @@ let numbers = [40, 68, 14, 90, 49];
 */
 
 // CODE HERE
-
+let newNumbersArr = numbers.map((number) => number / 2);
+console.log(numbers);
+console.log(newNumbersArr);
 
 ////////// PROBLEM 3 //////////
 
@@ -50,7 +53,10 @@ let cities = [
 */
 
 // CODE HERE
-
+let cityEndingWithI = cities.filter(
+  (city) => city.charAt(city.length - 1) === "i"
+);
+console.log(cityEndingWithI);
 
 ////////// PROBLEM 4 //////////
 
@@ -80,14 +86,36 @@ let fruits = [
 // ***** Do not edit the code above *****
 
 /* 
-    Using forEach method, identify each element of the 'fruits' array above if it's an apple or orange by its color. If the color is red, print "The fruit with index [THE ELEMENT'S INDEX] is an apple." If the color is orange, print "The fruit with index [THE ELEMENT INDEX] is an orange." If the color is not red or apple, print "The fruit with index [THE ELEMENT'S INDEX] is neither apple or orange."
+    Using forEach method, identify each element of the 'fruits' array above if it's an apple or orange by its color. 
+    If the color is red, print "The fruit with index [THE ELEMENT'S INDEX] is an apple." 
+    If the color is orange, print "The fruit with index [THE ELEMENT INDEX] is an orange." 
+    If the color is not red or apple, print "The fruit with index [THE ELEMENT'S INDEX] is neither apple or orange."
 
-    Note: do a google search on how to find an element's index of an array in Javascript. There is a built-in Javascript method that would help you find an index of an element in an array.
+    Note: do a google search on how to find an element's index of an array in Javascript. 
+    There is a built-in Javascript method that would help you find an index of an element in an array.
 */
 
 // CODE HERE
+let fruitColor = fruits.forEach((fruit) => {
+  switch (fruit.color) {
+    case "red":
+      console.log(`The fruit with index ${fruits.indexOf(fruit)} is an apple.`);
+      break;
+    case "orange":
+      console.log(
+        `The fruit with index ${fruits.indexOf(fruit)} is an orange.`
+      );
+      break;
+    default:
+      console.log(
+        `The fruit with index ${fruits.indexOf(
+          fruit
+        )} is neither apple or orange.`
+      );
+  }
+});
 
-
+console.log(fruitColor);
 
 /* 
     Run the code in node to see the result. Then, copy and paste the result below.
@@ -101,7 +129,11 @@ let fruits = [
 
 // COPY AND PASTE THE RESULT FROM YOUR CONSOLE (NODE CONSOLE IS YOUR TERMINAL) HERE (AS A MULTI LINES COMMENT)
 
-
+/* 
+The fruit with index 0 is neither apple or orange.
+The fruit with index 1 is an orange.
+The fruit with index 2 is neither apple or orange.
+The fruit with index 3 is an apple. */
 
 ////////// PROBLEM 5 //////////
 
@@ -145,7 +177,10 @@ let foods = [
 */
 
 // CODE HERE
+let totalPrice = foods
+  .filter((food) => food.name.includes("rice"))
+  .reduce((total, value) => total + value.price, 0);
 
+console.log(`Total Price: ${totalPrice}`);
 
 // THE TOTAL
-
