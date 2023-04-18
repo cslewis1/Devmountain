@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid green;
+    align-items:center;
+    padding: 20px;
+}
+
+.shapes{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    width: 100%;
+    height: 30vh;
+    border: 4px solid black;
+    padding: 10px;
+}
+
+.purple{
+    background-color: blueviolet;
+    height: 70%;
+    width: 4%;
+    margin-top: 5%;
+}
+
+.green{
+    background-color: green;
+    height: 100%;
+    width: 30%;    
+}
+
+.blue{
+    background-color: lightskyblue;
+    height: 100%;
+    width: 17%;
+    border-radius: 50%;
+}
+
+.block{
+    width: 100%;
+    height: 30vh;
+    border: 4px dotted black;
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.innerBlock{
+    background-color:beige;
+    width: 100%;
+    height: 100%;
+    box-shadow: 7px 7px 3px #3c3c3d;    
+}
+
+.hello{
+    display: flex;
+    width: 65%;
+    height: 40vh;
+    border: 2px solid lightgray;
+    box-shadow: 2px 2px 3px lightgrey;
+    text-align: center;
+}
+
+.friends{
+    margin: auto;
+    width: 50%;
+    font-size: 30px;
+    letter-spacing: 8px;
+    color: darkblue;
+    font-weight: bold;
+}
