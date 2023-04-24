@@ -1,0 +1,43 @@
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-family-logo: 'Nanum Pen Script', cursive;
+    --font-family-regular: 'Fira Sans', sans-serif;
+    --primary-color: #001219;
+    --secondary-color: #edf6f9;
+}
+
+.header{
+    height: 10vh;
+    width: 100vh;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: var(--font-family-logo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-section{
+    display: flex;
+}
+
+#hero-image{
+  width:  auto;
+  height: 30vh; 
+}
+
+.buy-btn{
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    height: 30px;
+    width: 70px;
+    font-family: var(--font-family-regular);
+}
