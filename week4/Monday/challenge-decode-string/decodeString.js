@@ -24,6 +24,7 @@ const decodeStr = (str) => {
     }
     return decode.join('')
 }
-console.log(decodeStr("1a"));
-console.log(decodeStr("3ce"));
+
+console.log(decodeStr2("1a"));
+console.log(decodeStr2("3ce"));
 console.log(decodeStr("2fcjjm"));
