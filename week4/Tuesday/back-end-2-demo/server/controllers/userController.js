@@ -26,15 +26,13 @@ module.exports = {
     const { movie_id } = req.params;
     const { type } = req.body;
 
-      for (let i = 0; i < db.length; i++) {
-        while(+movie_id <== 5 && +movie_id >== 1){
+    for (let i = 0; i < db.length; i++) {
         if (db[i].id === +movie_id) {
         if (type === "plus") {
           db[i].rating++;
         }
-            if (type === "minus") {
-                db[i].rating--;
-            }
+        if (type === "minus") {
+          db[i].rating--;
         }
       }
     }
