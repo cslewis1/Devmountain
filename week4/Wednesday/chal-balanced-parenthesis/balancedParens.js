@@ -38,10 +38,19 @@ let sample4 = "Balanced.";
 
 // Write your solution below:
 
-const balancedStr = (str) => str.split('').filter(el => el === '(' || el === ')').length % 2 === 0
+//Split the string into an array, filter out the parenthasis, take the remainder of the length. 
+//If the remainder is even return true, if odd return false.
+const balancedStr = (str) => {
+    let strArr = str.split('')
+    strArr.filter(el => el === '('.length)        
+}
 
+
+    
+    
 console.log(balancedStr(sample1));
 console.log(balancedStr(sample2));
 console.log(balancedStr(sample3))
 console.log(balancedStr(sample4))
+console.log(balancedStr(") )"))
 
