@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Welcome to Music Dictionary</h2>
+    <section id="add-section">
+      <form action="">
+        <input type="text" placeholder="Add for a song" id="song-name" />
+        <label for="song-name">Song Name</label>
+
+        <input type="text" placeholder="Add artist name" id="artist-name" />
+        <label for="artist-name">Artist Name</label>
+
+        <input type="text" placeholder="Add for a categories" id="categories" />
+        <label for="category">Song Name</label>
+
+        <button id="add-song">Submit</button>
+      </form>
+    </section>
+
+    <section id="display-section"></section>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

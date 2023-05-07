@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+input{
+    height: 30px;
+    width: 200px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    border: none;
+    box-shadow: 2px lightcyan;
+    height: 50px;
+    background-color: azure;
+}
