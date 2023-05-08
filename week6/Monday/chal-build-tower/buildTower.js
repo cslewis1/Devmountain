@@ -29,11 +29,19 @@ and a tower of 6 floors looks like this:
     '***********'
 ] */
 
-const buildTower = (num) => {
-    let arr = []
-    for (let i = 1; i <= num; i++){
-        
+const buildTower = (floors) => {
+  let towerArr = [];
+    let tower = "";
+    let num = 1
+ 
+  for (let i = 0; i < floors; i++) {
+      towerArr.push(
+          " ".repeat(floors - num) +
+          "*".repeat((i * 2) + 1) +
+          " ".repeat(floors - num))
+      num--
     }
-}
+  return towerArr;
+};
 
-buildTower(5)
+console.log(buildTower(5));
