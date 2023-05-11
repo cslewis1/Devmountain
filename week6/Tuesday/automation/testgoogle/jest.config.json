@@ -1,3 +1,4 @@
 {
-  "testTimeout": 10000
+  "testEnvironment": "node",
+  "testTimeout": 20000
 }
