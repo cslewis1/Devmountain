@@ -17,14 +17,14 @@ public class MarsExpedition {
         System.out.println("Please enter your name");
         String name = input.nextLine();
 
-        System.out.println("Hi, {name} — Welcome to the Expedition prep program. " +
+        System.out.println("Hi, " + name + " — Welcome to the Expedition prep program. " +
                 "Are you ready to head out into the new world? Type Y or N");
 
         String answer = input.nextLine();
         int team;
-        int teamSize = 0;
+        int teamSize = 2;
 
-        if (answer.toLowerCase().equals('y')) {
+        if (answer.equalsIgnoreCase("Y")) {
             System.out.println("I knew you would say that. You are team leader for a reason.");
         } else {
             System.out.println("Too bad you are team leader. You have to go.");
@@ -50,36 +50,34 @@ public class MarsExpedition {
                break;
             }
         }
+
             System.out.println("You are allowed to bring one snack with you. What do you want to bring?");
-            String snack = input.nextLine();
-            System.out.println("Nice choice, you will be bringing a " + snack + "with you.");
+
+            String snack = input.next();
+
+            System.out.println("Nice choice, you will be bringing a " + snack + " with you.");
 
             System.out.println("Please choose your vehicle");
             System.out.println("A: Range Rover" +
-                    "/n B: Dodge Ram" +
-                    "/n C: Ford F-150");
-        String vehicle = input.nextLine();
+                    "\nB: Dodge Ram" +
+                    "\nC: Ford F-150");
+        String vehicle = input.next();
 
         if (vehicle.equalsIgnoreCase("A")) {
-            vehicle = "a Mars Rover";
+            vehicle = "a Range Rover";
         } else if (vehicle.equalsIgnoreCase("B")) {
-            vehicle = "a Chevy Silverado";
+            vehicle = "a Dodge Ram";
         } else if (vehicle.equalsIgnoreCase("C")) {
-            vehicle = "a Honda Civic";
+            vehicle = "a Ford F-150";
         } else {
             vehicle = "your feet";
         }
 
-        System.out.println("Your expedition team is now ready" +
-                "\nLed by " + name + " with " + teamSize + " teammates." +
-                "\nTo explore the surface of Mars using " + vehicle + "." +
-                "\nExploration team heads out in" +
-                "\n5...." +
-                "\n4...." +
-                "\n3...." +
-                "\n2...." +
-                "\n1...." +
-                "\nGO GO GO!");
+        System.out.println("Your team is ready to explore Mars" +
+                "\nThe team lead is " + name + " leading " + teamSize + " teammates." +
+                "\nYou will have " + snack + " as a snack." +
+                "\nYou will drive around Mars in a " + vehicle + "." +
+                "\nGood Luck on you travels!!!");
     }
 }
 

@@ -15,19 +15,17 @@ public class FindingsList {
         samples.add("smooth rock");
         samples.add("not rock");
 
+        System.out.println("Samples: " + samples);
         System.out.println("Samples are downloaded.");
 
-        for(String item : samples){
-            System.out.println(item);
-        }
+
         System.out.println("There is a item on the list that's not a rock");
         System.out.println("It needs to be deleted");
 
         samples.remove("not rock");
 
-        for(String item : samples){
-            System.out.println(item);
-        }
+        System.out.println("Samples has been updated.");
+        System.out.println("Samples: " + samples);
 
         Thread.sleep(500);
 
@@ -41,13 +39,14 @@ public class FindingsList {
         System.out.println("Which of the fossils would you like to learn more about? (Bird, Fish, or Tooth)");
         Scanner input = new Scanner(System.in);
         String choice = input.nextLine();
+        String fossilChoice = choice.substring(0, 1).toUpperCase() + choice.substring(1) + " Fossil";
 
         if(choice.equalsIgnoreCase("Bird")){
-            System.out.println(choice.toUpperCase() + " Fossil: " + fossils.get(choice+ " Fossil"));
+            System.out.println(choice + " Fossil: " + fossils.get(fossilChoice));
         } else if (choice.equalsIgnoreCase("Fish")){
-            System.out.println(choice.toUpperCase() + " Fossil: " + fossils.get(choice+ " Fossil"));
+            System.out.println(choice + " Fossil: " + fossils.get(fossilChoice));
         } else if (choice.equalsIgnoreCase("Tooth")){
-            System.out.println(choice.toUpperCase() + " Fossil: " + fossils.get(choice+ " Fossil"));
+            System.out.println(choice + " Fossil: " + fossils.get(fossilChoice));
         }
 
         Thread.sleep(700);
